@@ -1,92 +1,98 @@
+
+/*reset*/
 * {
     padding: 0;
     margin: 0;
     font-family: 'Roboto','sans-serif';
     box-sizing: border-box;
 }
-
+/*declaração das variaveis para cores*/
 :root {
-    --main-color: blue;
-    --main-text-color:beige;
+    --cor-principal: darkcyan;
+    --cor-texto-principal:black;
     --border-color:gray;
-    --bio-bg-color:darkblue;
-    --bio-border-color:black;
-    --about-bg-color:darkgray;
+    --cor-lateral:turquoise;
+    --cor-borda-lateral:darkcyan;
+    --cor-central:lightseagreen;
 }
+/*geral*/
+.brilho_verde {
+    color:var(--cor-principal);
 
-.highlight {
-    color:var(--main-color);
-
 }
-
-#container {
-    display: flex;
-    flex-direction: row;
-    color:var(--main-text-color);
-}
-
-#bio.container {
-    flex:1 1 20%;
-    min-height: 100vh;
-    background-color: var(--bio-bg-color);
-    text-align: center;
-    padding: 30px 12px;
-    border-right: 5px solid var(--bio-border-color);
-}
-
-#about-container {
-    flex:1 1 80%;
-    min-height: 100vh;
-    background-color: var(--about-bg-color);
-    padding: 50px;
-}
-#bio-container h2 {
-    margin-bottom: 25px;
-}
-#bio-container p {
-    margin-bottom: 20px;
-}
-#bio-container #welcome-text {
+#b {
     font-weight: bold;
 }
-#bio-image {
+
+#principal {
+    display: flex;
+    flex-direction: row;
+    color:var(--cor-texto-principal);
+}
+
+#lateral {
+    flex:1 1 20%;
+    min-height: 100vh;
+    background-color: var(--cor-lateral);
+    text-align: center;
+    padding: 30px 12px;
+    border-right: 5px solid var(--cor-borda-lateral);
+}
+#lateral img {
     width: 175px;
     height: 175px;
     border-radius: 50%;
     margin-bottom: 25px;
 }
-#social-container {
+
+
+#central{
+    flex:1 1 80%;
+    min-height: 100vh;
+    background-color: var(--cor-central);
+    padding: 50px;
+}
+#lateral h2 {
+    margin-bottom: 25px;
+}
+#lateral p {
+    margin-bottom: 20px;
+}
+#lateral #bemvindo {
+    font-weight: bold;
+}
+
+#redes_sociais {
     display: flex;
     justify-content: center;
     list-style: none;
-    border-bottom:1px solid;
+    border-bottom:2px solid var(--cor-borda-lateral);
     margin-bottom: 25px;
     padding-bottom: 25px;
 }
-#social-container li {
+#redes_sociais li {
     flex: 1 1 0;
     max-width: 60px;
 }
-#social-container li a{
-    color:var(--main-color);
+#redes_sociais li a{
+    color:var(--cor-principal);
     font-size: 30px;
 }
-#email-container {
+#email {
     display:flex;
     justify-content: center;
 }
-#email-container ion-icon,
-#email-container a {
+#email ion-icon,#email a {
     flex: 1 1 0;
 }
 
-#email-container a {
-    color: var(--main-text-color);
+#email a {
+    color: var(--cor-texto-principal);
     text-decoration: none;
     max-width: 225px;
 }
-#email-container ion-icon {
-    color: var(--main-color);
+#email ion-icon {
+    color: var(--cor-principal);
     font-size: 20px;
     margin-right: 5px;
     max-width: 20px;
@@ -94,66 +100,68 @@
 #nome {
     font-size: 42px;
     margin-bottom: 15px;
+    
 }
 #titulo {
     font-size: 24px;
-    margin-bottom: 15px;
+    margin-bottom: 50px;
     font-weight: bold;
 }
-.descripcion {
-    max-width: 75px;
+.descricao {
+    max-width: 75%;
     margin-bottom: 10px;
+    text-align: justify;
 }
-#btn-projects {
+#projetos_github {
     font-weight: bold;
     font-size: 16px;
-    color:var(--main-text-color);
-    background-color: var(--main-color);
-    border:2px solid var(--main-color);
+    color:var(--cor-texto-principal);
+    background-color: var(--cor-lateral);
+    border:2px solid var(--cor-texto-principal);
     border-radius: 5px;
     text-decoration: none;
-    transition: 5s;
+    transition: 1s;
     margin: 25px 0;
     padding:12px 10px;
     width: 150px;
     text-align:center;
     display: flex;
 }
-#btn-projects ion-icon,
-#btn-projects span {
+#projetos_github ion-icon {
     flex: 1 1 0;
-}
-#btn-projects ion-icon {
     font-size: 20px;
     max-width: 20px;
 }
-#btn-projects:hover {
+
+    
+
+#projetos_github:hover {
     background-color: transparent;
 }
-#skills-section-tittle {
-    border-top: 1px solid var(--border-color);
+#habilidades {
+    border-top: 1px solid var(--cor-borda-lateral);
     padding-top: 20px;
     margin-bottom: 20px;
     font-size: 32px;
 }
-#skills-container {
+#conteudo_habilidades {
     display: flex;
     flex-wrap: wrap;
     margin-top: 25px;
 }
-.skkils-box {
+.box_habilidades{
     flex:1 1 33%;
     max-width: 33%;
     margin-bottom: 35px;
 }
-.skills-title {
+.titulo_skill {
     font-size: 24px;
-    margin-bottom: 35px;
+    margin-bottom: 25px;
     font-weight: bold;
     padding-left: 10px;
-    border-left: 5px solid var(--main-color);
+    border-left: 5px solid var(--cor-lateral);
 }
-.skkils-box i {
+.box_habilidades i {
     font-size: 45px;
     margin-right: 10px;
 }
