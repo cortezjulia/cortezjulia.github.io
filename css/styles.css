@@ -1,3 +1,32 @@
+/*Notas
+Flex Container: O Flex Container é a tag que envolve os itens flex, ao indicar display: 
+flex, essa tag passa a ser um Flex Container.
+
+1 • display
+Define o elemento como um flex container, tornando os seus filhos flex-itens.
+
+2 • flex-direction
+Define a direção dos flex itens. Por padrão ele é row (linha), por isso quando o display: 
+flex; é adicionado, os elementos ficam em linha, um do lado do outro.
+A mudança de row para column geralmente acontece quando estamos definindo os estilos em 
+media queries para o mobile. Assim você garante que o conteúdo seja apresentado em coluna única.
+
+3 • flex-wrap
+Define se os itens devem quebrar ou não a linha. Por padrão eles não quebram linha, isso faz com que
+ os flex itens sejam compactados além do limite do conteúdo.
+Essa é geralmente uma propriedade que é quase sempre definida como flex-wrap: wrap; Pois assim quando
+ um dos flex itens atinge o limite do conteúdo, o último item passa para a coluna debaixo e assim por diante.
+
+5 • justify-content
+Alinha os itens flex no container de acordo com a direção. A propriedade só funciona se 
+os itens atuais não ocuparem todo o container. Isso significa que ao definir flex: 1; ou algo similar 
+nos itens, a propriedade não terá mais função
+Excelente propriedade para ser usada em casos que você deseja alinhar um item na ponta esquerda
+ e outro na direita, como em um simples header com marca e navegação.
+
+*/
+
+
 
 /*reset*/
 * {
@@ -20,6 +49,7 @@
     color:var(--cor-principal);
 
 }
+/*frases em negrito*/
 #b {
     font-weight: bold;
 }
@@ -134,7 +164,7 @@
 }
 
     
-
+/*passar em cima do botao*/
 #projetos_github:hover {
     background-color: transparent;
 }
@@ -165,6 +195,7 @@
     font-size: 45px;
     margin-right: 10px;
 }
+/*sequencia p/ dispositivo movel*/
 @media(max-width:450px) 
 {
     #principal {
